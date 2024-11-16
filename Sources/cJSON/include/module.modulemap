@@ -1,0 +1,3 @@
+module cJSON {
+	umbrella header "cjson/cJSON.h"
+}

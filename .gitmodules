@@ -1,0 +1,10 @@
+[submodule "msgstream"]
+	path = msgstream
+	url = git@github.com:gulachek/msgstream.git
+[submodule "unixsocket"]
+	path = unixsocket
+	url = git@github.com:gulachek/unixsocket.git
+[submodule "catui"]
+	path = catui
+	url = git@github.com:gulachek/catui.git
+	branch = v0.1.3

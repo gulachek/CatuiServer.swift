@@ -4,6 +4,9 @@ import PackageDescription
 
 let package = Package(
     name: "CatuiServer",
+    platforms: [
+        .macOS(.v13)
+    ],
     products: [
         .library(
             name: "CatuiServer",
@@ -11,7 +14,25 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "CatuiServer"),
+            name: "CatuiServer",
+            dependencies: ["msgstream", "unixsocket", "catui"]
+        ),
+        .target(
+            name: "msgstream"
+        ),
+        .target(
+            name: "unixsocket"
+        ),
+        .target(
+            name: "catui",
+            dependencies: ["msgstream", "unixsocket", "cJSON"]
+        ),
+        .target(
+            name: "cJSON",
+            cSettings: [
+                .headerSearchPath("include/cjson")
+            ]
+        ),
         .testTarget(
             name: "CatuiServerTests",
             dependencies: ["CatuiServer"]),
