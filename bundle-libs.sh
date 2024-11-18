@@ -3,6 +3,8 @@
 # This is intended to generate and copy dependencies
 # like msgstream into Sources folder compatible with
 # SwiftPM
+# Because SwiftPM relies on sources being in the git repo,
+# the output of this _will_ be committed to the repo
 
 ROOT="$PWD"
 SRC="$ROOT/Sources"
